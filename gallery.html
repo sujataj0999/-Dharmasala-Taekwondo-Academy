@@ -203,19 +203,24 @@
             
             <!-- Video Gallery Section -->
             <h3 class="text-navy text-center mb-4 mt-5">Video Gallery</h3>
-            <div class="row g-4 mb-5">
-                <!-- Video Item 1 -->
-                <div class="col-md-6 reveal">
-                    <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
-                        <iframe src="https://www.youtube.com/embed/29iKKZHd3VM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="swiper videoSwiper mb-5 reveal">
+                <div class="swiper-wrapper">
+                    <!-- Video Item 1 -->
+                    <div class="swiper-slide">
+                        <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                            <iframe src="https://www.youtube.com/embed/29iKKZHd3VM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Video Item 2 -->
+                    <div class="swiper-slide">
+                        <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                            <iframe src="https://www.youtube.com/embed/hBi2sUAB54Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
-                <!-- Video Item 2 -->
-                <div class="col-md-6 reveal">
-                    <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
-                        <iframe src="https://www.youtube.com/embed/hBi2sUAB54Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
             
         </div>
@@ -310,6 +315,29 @@
             },
             992: {
               slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          },
+        });
+      });
+
+      var videoSwipers = document.querySelectorAll('.videoSwiper');
+      videoSwipers.forEach(function(el) {
+        new Swiper(el, {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: false,
+          navigation: {
+            nextEl: el.querySelector('.swiper-button-next'),
+            prevEl: el.querySelector('.swiper-button-prev'),
+          },
+          pagination: {
+            el: el.querySelector('.swiper-pagination'),
+            clickable: true,
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
               spaceBetween: 30,
             },
           },

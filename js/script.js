@@ -84,10 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         
-        // Pause on hover
+        // Pause on hover (only for devices that support hover)
         if(heroSection) {
-            heroSection.addEventListener('mouseenter', stopAutoPlay);
-            heroSection.addEventListener('mouseleave', startAutoPlay);
+            heroSection.addEventListener('mouseenter', () => {
+                if (window.matchMedia("(hover: hover)").matches) {
+                    stopAutoPlay();
+                }
+            });
+            heroSection.addEventListener('mouseleave', () => {
+                if (window.matchMedia("(hover: hover)").matches) {
+                    startAutoPlay();
+                }
+            });
         }
         
         // Init

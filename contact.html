@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dharmasala Taekwondo Academy</title>
+    <meta name="description" content="Contact Dharmasala Taekwondo Academy. Send us an enquiry, find our location, or view our training hours.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            background-color: var(--color-navy);
+            background-image: linear-gradient(to right, rgba(11, 19, 43, 0.9), rgba(11, 19, 43, 0.7)), url('taekwondo-kids.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 80px;
+            text-align: center;
+            color: var(--color-white);
+        }
+        .page-header h1 {
+            color: var(--color-white);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info-card {
+            background: var(--color-navy);
+            color: var(--color-white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            height: 100%;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--color-red);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-form-wrapper {
+            background: var(--color-white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form-control, .form-select {
+            padding: 12px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--border-radius-sm);
+            margin-bottom: 20px;
+            font-family: var(--font-body);
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--color-royal);
+            box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+        }
+        
+        .map-container {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 400px;
+            box-shadow: var(--shadow-sm);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-premium">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="dharmasala_taekwond-_logo.jpg" alt="Dharmasala Taekwondo Academy Logo" style="border-radius: 5px;">
+                <span class="navbar-brand-text">Dharmasala Taekwondo Academy</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0"><a href="contact.html" class="btn-premium btn-primary-action">Join / Enquire Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container reveal">
+            <h1>Get In Touch</h1>
+            <p class="lead">We'd love to hear from you. Start your journey today.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section-padding section-bg-light">
+        <div class="container">
+            <div class="row g-5">
+                
+                <!-- Contact Info -->
+                <div class="col-lg-6 col-md-8 mx-auto reveal">
+                    <div class="contact-info-card">
+                        <h3 class="text-white border-bottom border-secondary pb-3 mb-4">Contact Information</h3>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h5 class="text-white mb-1">Our Location</h5>
+                                <p class="text-white-50 mb-0">Mini Stadium Rd,<br>near by Dharmasala, Jaraka,<br>Pandua, Odisha 755050</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h5 class="text-white mb-1">Call Us</h5>
+                                <p class="text-white-50 mb-0">082492 27411<br>098532 53506</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div>
+                                <h5 class="text-white mb-1">WhatsApp</h5>
+                                <p class="text-white-50 mb-0">098532 53506</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h5 class="text-white mb-1">Email Us</h5>
+                                <p class="text-white-50 mb-0">samartkd594@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item mb-0">
+                            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h5 class="text-white mb-1">Opening hours</h5>
+                                <p class="text-white-50 mb-0">Mon-Sun: 16:30 – 18:30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section-padding section-bg-white reveal">
+        <div class="container">
+            <div class="map-container">
+                <!-- Google Maps iframe for Dharmasala Taekwondo Academy -->
+                <iframe src="https://maps.google.com/maps?q=Dharmasala%20Taekwondo%20Academy,%20Mini%20Stadium%20Rd,%20Jaraka,%20Odisha&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="footer-logo d-inline-block">
+                        <img src="dharmasala_taekwond-_logo.jpg" alt="Dharmasala Taekwondo Academy Logo">
+                    </a>
+                    <p class="text-white-50 mt-3 pe-md-4">Empowering students through professional Taekwondo training, building discipline, fitness, and confidence for a lifetime of success.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="programs.html">Kids Taekwondo</a></li>
+                        <li><a href="programs.html">Teens & Adults</a></li>
+                        <li><a href="programs.html">Competition</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li class="d-flex mb-3"><i class="fa-solid fa-phone text-red me-3 mt-1"></i><span class="text-white-50">082492 27411<br>098532 53506</span></li>
+                        <li class="d-flex mb-3"><i class="fa-solid fa-envelope text-red me-3 mt-1"></i><span class="text-white-50">samartkd594@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-12 text-center text-white-50 small">&copy; 2026 Dharmasala Taekwondo Academy.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

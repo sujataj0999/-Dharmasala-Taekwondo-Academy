@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Auto-play
         const startAutoPlay = () => {
+            clearInterval(slideInterval); // Prevent multiple overlapping intervals
             slideInterval = setInterval(nextSlide, intervalTime);
         };
         
@@ -73,30 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         // Event Listeners
-        if(nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); stopAutoPlay(); startAutoPlay(); });
-        if(prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); stopAutoPlay(); startAutoPlay(); });
+        if(nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
+        if(prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
         
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 goToSlide(index);
-                stopAutoPlay();
                 startAutoPlay();
             });
         });
         
-        // Pause on hover (only for devices that support hover)
-        if(heroSection) {
-            heroSection.addEventListener('mouseenter', () => {
-                if (window.matchMedia("(hover: hover)").matches) {
-                    stopAutoPlay();
-                }
-            });
-            heroSection.addEventListener('mouseleave', () => {
-                if (window.matchMedia("(hover: hover)").matches) {
-                    startAutoPlay();
-                }
-            });
-        }
+        // Removed 'Pause on hover' so the animation never stops unexpectedly in between
         
         // Init
         goToSlide(0);
